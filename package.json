@@ -20,6 +20,7 @@
   "devDependencies": {
     "cross-env": "^7.0.3",
     "jest": "^27.0.6",
+    "lodash": "^4.17.21",
     "standard": "^16.0.3"
   },
   "dependencies": {
