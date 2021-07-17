@@ -1,6 +1,6 @@
 {
   "name": "stojo",
-  "version": "1.0.0",
+  "version": "0.1.0",
   "description": "Plain Old JavaScript Object Store",
   "main": "lib/index.mjs",
   "type": "module",
