@@ -1,5 +1,5 @@
 /* eslint-env jest */
-import * as stojo from '../lib/Stojo.mjs'
+import * as stojo from '../lib/index.mjs'
 import fs from 'fs'
 import _ from 'lodash'
 
