@@ -1,5 +1,5 @@
 {
-  "name": "stojo",
+  "name": "@codegrill/stojo",
   "version": "0.1.0",
   "description": "Plain Old JavaScript Object Store",
   "main": "lib/index.mjs",
@@ -25,5 +25,14 @@
   },
   "dependencies": {
     "sqlite3": "^5.0.2"
-  }
+  },
+  "directories": {
+    "lib": "lib",
+    "test": "test"
+  },
+  "keywords": [
+    "pojo",
+    "store",
+    "node"
+  ]
 }
