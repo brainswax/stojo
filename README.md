@@ -3,12 +3,12 @@ Stojo is a simple plain old JavaScript object store, that can be used to persist
 
 ## Installation
 ```shell
-npm install --save stojo
+npm install --save @codegrill/stojo
 ```
 
 ## Example
 ```JavaScript
-import { Stojo } from 'stojo'
+import { Stojo } from '@codegrill/stojo'
 
 const stojo = new Stojo()
 stojo.store('my.key', { foo: 'bar' })
@@ -36,7 +36,7 @@ The constructor takes the following optional parameters:
   * select ```<string>``` the query used to fetch a row from the database table
 
 ```JavaScript
-import { Stojo } from 'stojo'
+import { Stojo } from '@codegrill/stojo'
 import sqlite3 from 'sqlite3'
 import logger from 'pino'
 
