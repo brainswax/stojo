@@ -26,7 +26,7 @@ This should output:
 
 ## Stojo Class
 
-### Constructor
+### new Stojo(options)
 The constructor takes the following optional parameters:
 
 * options ```<Object>```
@@ -48,22 +48,35 @@ const stojo = new Stojo({
 })
 ```  
 
-### Stojo.init
+### init()
 Added: v0.1.0
 
 This will create the database table if it doesn't exist. It will only attempt to create the table once. Subsequent calls will be a no-op. A user is not required to ever call this and will get checked on any store or fetch command.
 
-### Stojo.store
+Returns a Promise to create the database table or no-op
+
+### store(name, object)
 Added: v0.1.0
 
 Stores a named object in the store.
 
-### Stojo.fetch
+* name ```<string>``` the unique name of the named Object to store
+* object ```<Object>``` the JavaScript Object to store
+
+Returns a Promise to store the object
+
+### fetch(name)
 Added: v0.1.0
 
 Fetches a named object from the store.
 
-### Stojo.close
+* name ```<string>``` the name of the Object to fetch from the store
+
+Returns the JavaScript Object if it exists or null
+
+### close()
 Added: v0.1.0
 
 Calls close on the db object
+
+Returns a Promise to close the database connection
