@@ -1,5 +1,7 @@
 # Stojo
-Stojo is a simple plain old JavaScript object store, that can be used to persist arbitrary JavaScript objects across application restarts or multiple applications. By default it uses sqlite3 to persist a named object to disk.
+Stojo is a simple plain old JavaScript object store.
+
+This can be used to persist arbitrary JavaScript objects across application restarts or multiple applications. By default it uses sqlite3 to persist a named object to disk.
 
 ## Installation
 ```shell
