@@ -7,10 +7,10 @@ This can be used to persist arbitrary JavaScript objects across application rest
 * [Instllation](#installation)
 * [Usage](#usage)
 * [Stojo Class](#stojo-class)
-  * [new Stojo(options)](#new-stojo-options)
+  * [new Stojo(options)](#new-stojooptions)
   * [init()](#init)
-  * [store(name, object)](#store-name-object)
-  * [fetch(name)](#fetch-name)
+  * [store(name, object)](#storename-object)
+  * [fetch(name)](#fetchname)
   * [close()](#close)
 
 
