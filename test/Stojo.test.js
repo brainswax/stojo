@@ -1,5 +1,5 @@
 /* eslint-env jest */
-import * as stojo from '../lib/index.mjs'
+import { Stojo } from '../lib/index.mjs'
 import fs from 'fs'
 import _ from 'lodash'
 import assert from 'assert'
@@ -8,7 +8,7 @@ describe('Stojo', () => {
   const file = './stojo.test.sqlite3'
   if (fs.existsSync(file)) fs.unlinkSync(file)
 
-  const store = new stojo.Stojo({ file: file })
+  const store = new Stojo({ file: file })
   const key = 'test.foo'
   const object = { foo: 'foo' }
   const notakey = 'not.an.object'
