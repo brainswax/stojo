@@ -2,6 +2,7 @@
 import * as stojo from '../lib/index.mjs'
 import fs from 'fs'
 import _ from 'lodash'
+import assert from 'assert'
 
 describe('Stojo', () => {
   const file = './stojo.test.sqlite3'
@@ -13,32 +14,48 @@ describe('Stojo', () => {
   const notakey = 'not.an.object'
   const nullkey = 'null'
 
-  it('can store an object', async () => {
-    return store.store(key, object)
+  describe('init', () => {
+    it('can initialize', () => {
+      return store.init()
+    })
   })
 
-  it('can fetch the stored object', async () => {
-    return store.fetch(key)
-      .then(data => {
-        expect(_.isEqual(data, object)).toBe(true)
-      })
+  describe('store', () => {
+    it('can store an object', async () => {
+      return store.store(key, object)
+    })
+
+    it('can store a null object', async () => {
+      return store.store(nullkey, null)
+    })
   })
 
-  it('can handle fetching an object that doesn\'t exist', async () => {
-    return store.fetch(notakey)
-      .then(data => {
-        expect(data).toBe(null)
-      })
+  describe('fetch', () => {
+    it('can fetch a stored object', async () => {
+      return store.fetch(key)
+        .then(data => {
+          assert.ok(_.isEqual(data, object))
+        })
+    })
+
+    it('can fetch a null object', async () => {
+      return store.fetch(nullkey)
+        .then(data => {
+          assert.equal(data, null)
+        })
+    })
+
+    it('can handle fetching an object that doesn\'t exist', async () => {
+      return store.fetch(notakey)
+        .then(data => {
+          assert.equal(data, null)
+        })
+    })
   })
 
-  it('can store a null object', async () => {
-    return store.store(nullkey, null)
-  })
-
-  it('can fetch a null object', async () => {
-    return store.fetch(nullkey)
-      .then(data => {
-        expect(data).toBe(null)
-      })
+  describe('close', () => {
+    it('can close the database connection', () => {
+      return store.close()
+    })
   })
 })
