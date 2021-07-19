@@ -1,6 +1,7 @@
-test/
-node_modules/
-.git/
+test
+coverage
+node_modules
+.git
 .gitignore
 *.sqlite3
 *.tgz

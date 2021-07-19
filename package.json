@@ -5,6 +5,7 @@
   "main": "lib/index.mjs",
   "type": "module",
   "scripts": {
+    "coverage": "c8 -r lcov -r text npm test",
     "test": "standard && mocha"
   },
   "repository": {
@@ -18,7 +19,8 @@
   },
   "homepage": "https://github.com/brainswax/stojo#readme",
   "devDependencies": {
-    "cross-env": "^7.0.3",
+    "c8": "^7.7.3",
+    "chai": "^4.3.4",
     "lodash": "^4.17.21",
     "mocha": "^9.0.2",
     "standard": "^16.0.3"
@@ -32,7 +34,6 @@
   },
   "keywords": [
     "pojo",
-    "store",
-    "node"
+    "store"
   ]
 }
