@@ -1,11 +1,12 @@
 {
-  "name": "stojo",
+  "name": "@codegrill/stojo",
   "version": "0.1.2",
   "description": "Plain Old JavaScript Object Store",
   "main": "lib/index.mjs",
   "type": "module",
   "scripts": {
-    "test": "standard && cross-env NODE_OPTIONS=--experimental-vm-modules jest"
+    "coverage": "c8 -r lcov -r text npm test",
+    "test": "standard && mocha"
   },
   "repository": {
     "type": "git",
@@ -18,12 +19,21 @@
   },
   "homepage": "https://github.com/brainswax/stojo#readme",
   "devDependencies": {
-    "cross-env": "^7.0.3",
-    "jest": "^27.0.6",
+    "c8": "^7.7.3",
+    "chai": "^4.3.4",
     "lodash": "^4.17.21",
+    "mocha": "^9.0.2",
     "standard": "^16.0.3"
   },
   "dependencies": {
     "sqlite3": "^4.2.0"
-  }
+  },
+  "directories": {
+    "lib": "lib",
+    "test": "test"
+  },
+  "keywords": [
+    "pojo",
+    "store"
+  ]
 }
